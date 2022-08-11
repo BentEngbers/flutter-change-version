@@ -11,10 +11,11 @@ async function run(): Promise<void> {
   try {
     const shouldIncreaseBuildnumber: boolean =
       core.getInput('increase-build-number') === 'true'
+    const workingDirectory = core.getInput('working-directory')
     if (!shouldIncreaseBuildnumber) {
       return
     }
-    increaseBuildNumber('./')
+    increaseBuildNumber(workingDirectory)
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
     throw error

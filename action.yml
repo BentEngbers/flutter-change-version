@@ -6,6 +6,10 @@ inputs:
     default: "true"
     required: false
     description: "Set this to true to increase the version number by one (true|false)"
+  working-directory:
+    required: false
+    default: "./"
+    description: "The working directory to use for resolving paths for pubspec.yaml"
 runs:
   using: "node16"
   main: "dist/index.js"

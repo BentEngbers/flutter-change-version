@@ -47,10 +47,11 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const shouldIncreaseBuildnumber = core.getInput('increase-build-number') === 'true';
+            const workingDirectory = core.getInput('working-directory');
             if (!shouldIncreaseBuildnumber) {
                 return;
             }
-            increaseBuildNumber('./');
+            increaseBuildNumber(workingDirectory);
         }
         catch (error) {
             if (error instanceof Error)
