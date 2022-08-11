@@ -26,7 +26,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
-        working-directory: "./__tests__/static/pubspec.yaml"
+        working-directory: ./__tests__/static/
         with:
           increase-build-number: "true"
-          
