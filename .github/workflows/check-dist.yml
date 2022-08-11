@@ -10,10 +10,10 @@ on:
     branches:
       - main
     paths-ignore:
-      - '**.md'
+      - "**.md"
   pull_request:
     paths-ignore:
-      - '**.md'
+      - "**.md"
   workflow_dispatch:
 
 jobs:
@@ -27,6 +27,7 @@ jobs:
         uses: actions/setup-node@v2.5.1
         with:
           node-version: 18.x
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
