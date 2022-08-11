@@ -5,7 +5,7 @@ inputs:
   increase-build-number:
     default: "true"
     required: false
-    description: "Set this to true to increase the version number by one (true|false)"
+    description: 'Set this to "true" to increase the version number by one (true|false)'
   working-directory:
     required: false
     default: "./"
