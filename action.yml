@@ -1,11 +1,11 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: "Your name here"
+description: "Provide a description here"
+author: "Your name or organization here"
 inputs:
-  milliseconds: # change this
-    required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  increase-build-number:
+    default: "true"
+    required: false
+    description: "Set this to true to increase the version number by one (true|false)"
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: "node16"
+  main: "dist/index.js"
