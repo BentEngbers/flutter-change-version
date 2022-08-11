@@ -43,11 +43,10 @@ exports.increaseBuildNumber = void 0;
 const core = __importStar(__nccwpck_require__(2186));
 const utils_1 = __nccwpck_require__(918);
 const version_1 = __nccwpck_require__(8217);
-const baseDir = './';
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const shouldIncreaseBuildnumber = core.getInput('increase-build-number') == 'true';
+            const shouldIncreaseBuildnumber = core.getInput('increase-build-number') === 'true';
             if (!shouldIncreaseBuildnumber) {
                 return;
             }

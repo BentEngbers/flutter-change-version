@@ -11,11 +11,11 @@ export class Version {
   buildMajor: number
   buildMinor: number
   buildPatch: number
-  get buildName() {
+  get buildName(): string {
     return `${this.buildMajor}.${this.buildMinor}.${this.buildPatch}`
   }
 
-  get stringify() {
+  get stringify(): string {
     return `${this.buildName}+${this.buildNumber}`
   }
 
@@ -31,7 +31,7 @@ export class Version {
     this.buildNumber = buildNumber
   }
 
-  public static fromString(versionString: string): Version {
+  static fromString(versionString: string): Version {
     const splitPlus = versionString.split('+')
     if (splitPlus.length !== 2) {
       throw Error(

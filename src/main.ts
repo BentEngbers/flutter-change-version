@@ -1,19 +1,16 @@
 import * as core from '@actions/core'
 import {
   convertToFullPath,
-  fullPathType,
   parseYamlString,
   readYamlFile,
   writeYamlFile
 } from './utils'
 import {Version} from './version'
 
-const baseDir = './'
-
 async function run(): Promise<void> {
   try {
     const shouldIncreaseBuildnumber: boolean =
-      core.getInput('increase-build-number') == 'true'
+      core.getInput('increase-build-number') === 'true'
     if (!shouldIncreaseBuildnumber) {
       return
     }
@@ -24,7 +21,7 @@ async function run(): Promise<void> {
   }
 }
 
-export function increaseBuildNumber(path: string) {
+export function increaseBuildNumber(path: string): void {
   const fullPath = convertToFullPath(path)
   const yaml = parseYamlString(readYamlFile(fullPath))
   const versionString = yaml.get('version')

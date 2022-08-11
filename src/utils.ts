@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import * as path from 'path'
-import {Opaque} from 'type-fest/source/opaque'
+import {Opaque} from 'type-fest'
 import {parseDocument, Document, ParsedNode} from 'yaml'
 const FileNameYaml = 'pubspec.yaml'
 
