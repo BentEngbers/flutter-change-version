@@ -1,6 +1,6 @@
-name: "Your name here"
+name: "Change flutter version tag"
 description: "Provide a description here"
-author: "Your name or organization here"
+author: "Bent Engbers"
 inputs:
   increase-build-number:
     default: "true"
