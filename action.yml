@@ -1,5 +1,5 @@
 name: "Change flutter version tag"
-description: "Provide a description here"
+description: "Change the flutter version with one simple commmand"
 author: "Bent Engbers"
 inputs:
   increase-build-number:
