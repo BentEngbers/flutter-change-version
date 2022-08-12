@@ -69,7 +69,7 @@ function increaseBuildNumber(path) {
     }
     const version = version_1.Version.fromString(versionString);
     version.buildNumber++;
-    core.exportVariable('NEW_VERSION', version.stringify);
+    core.exportVariable('FLUTTER_BUILD_VERSION', version.stringify);
     yaml.set('version', version.stringify);
     (0, utils_1.writeYamlFile)(fullPath, yaml);
 }

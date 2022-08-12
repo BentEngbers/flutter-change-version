@@ -31,7 +31,7 @@ export function increaseBuildNumber(path: string): void {
   }
   const version = Version.fromString(versionString)
   version.buildNumber++
-  core.exportVariable('NEW_VERSION', version.stringify)
+  core.exportVariable('FLUTTER_BUILD_VERSION', version.stringify)
   yaml.set('version', version.stringify)
   writeYamlFile(fullPath, yaml)
 }
