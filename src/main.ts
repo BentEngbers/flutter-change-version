@@ -7,10 +7,13 @@ import {
 } from './utils'
 import {Version} from './version'
 
-async function run(): Promise<void> {
+export async function run(): Promise<void> {
   try {
-    const shouldIncreaseBuildnumber: boolean =
-      core.getInput('increase-build-number') === 'true'
+    // const foo = core.getInput('INCREASE-BUILD-NUMBER')
+    // console.log(foo)
+    const shouldIncreaseBuildnumber: boolean = core.getBooleanInput(
+      'INCREASE-BUILD-NUMBER'
+    )
     const workingDirectory = core.getInput('working-directory')
     if (!shouldIncreaseBuildnumber) {
       return

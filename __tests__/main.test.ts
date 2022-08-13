@@ -1,4 +1,4 @@
-import {increaseBuildNumber} from '../src/main'
+import {increaseBuildNumber, run} from '../src/main'
 import * as process from 'process'
 import * as cp from 'child_process'
 import * as path from 'path'
@@ -14,9 +14,10 @@ function createChildProcess(currentWorkingDirectory: string) {
   }
   return cp.execFileSync(np, [ip], options).toString()
 }
-test('test runs correctly', () => {
-  const result = createChildProcess('./__tests__/static/')
-  console.log(process.env)
+test.only('test runs correctly', async () => {
+  process.env['INPUT_INCREASE-BUILD-NUMBER'] = 'true'
+  await run()
+  console.log(process.env['INPUT_INCREASE-BUILD-NUMBER'])
 })
 test('test runs correctly', () => {
   expect(() => createChildProcess('fake')).toThrow()

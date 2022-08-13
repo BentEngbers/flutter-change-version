@@ -2,10 +2,10 @@ name: "Change flutter version tag"
 description: "Change the flutter version with one simple commmand"
 author: "Bent Engbers"
 inputs:
-  increase-build-number:
-    default: "true"
-    required: false
-    description: 'Set this to "true" to increase the version number by one (true|false)'
+  # increase-build-number:
+  #   #default: true
+  #   required: false
+  #   description: 'Set this to "true" to increase the version number by one (true|false)'
   working-directory:
     required: false
     default: "./"
