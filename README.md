@@ -1,5 +1,3 @@
-# Table of contents
-- [Table of contents](#table-of-contents)
 - [About this github action for flutter](#about-this-github-action-for-flutter)
 - [Usage](#usage)
   - [Example](#example)
