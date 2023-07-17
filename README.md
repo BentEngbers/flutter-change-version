@@ -1,3 +1,17 @@
+# Archived. Use Cider instead
+```yaml
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@v1.5.0
+
+      - name: install cider
+        run: pub global activate cider
+
+      - name: Change flutter version tag
+        run: |
+          echo "FLUTTER_BUILD_VERSION=$(cider bump patch --bump-build)" >> "$GITHUB_ENV"
+```
+
+
 - [About this github action for flutter](#about-this-github-action-for-flutter)
 - [Usage](#usage)
   - [Example](#example)
