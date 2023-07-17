@@ -12,6 +12,9 @@
 ```
 
 
+---
+
+
 - [About this github action for flutter](#about-this-github-action-for-flutter)
 - [Usage](#usage)
   - [Example](#example)
